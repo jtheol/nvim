@@ -52,3 +52,5 @@ require("lazy").setup({
     },
   },
 })
+
+require("config.mason")
