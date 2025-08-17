@@ -13,7 +13,8 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
   end
 end
 vim.opt.rtp:prepend(lazypath)
-vim.api.nvim_set_option("clipboard", "unnamedplus")
+vim.api.nvim_set_option("clipboard", "unnamed")
+vim.keymap.set({ "n", "i", "v", "x" }, "<D-c>", '"+y', { desc = "MacOS copy" })
 vim.o.guifont = "Cascadia Code"
 
 require("lazy").setup({
