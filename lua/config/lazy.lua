@@ -15,7 +15,7 @@ end
 vim.opt.rtp:prepend(lazypath)
 vim.api.nvim_set_option("clipboard", "unnamed")
 vim.keymap.set({ "n", "i", "v", "x" }, "<D-c>", '"+y', { desc = "MacOS copy" })
-vim.o.guifont = "Cascadia Code"
+vim.o.guifont = "IBM Plex Mono"
 
 require("lazy").setup({
   spec = {

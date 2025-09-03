@@ -2,6 +2,7 @@ return {
   "hkupty/iron.nvim",
   config = function()
     local iron = require("iron.core")
+    local python_format = require("iron.fts.common").bracketed_paste_python
 
     iron.setup({
       config = {
@@ -14,6 +15,10 @@ return {
             -- returns a table (see below)
             command = { "zsh" },
           },
+          python = {
+            command = { "ipython", "--no-autoindent" },
+            format = python_format,
+          },
         },
         -- How the repl window will be displayed
         -- See below for more information
@@ -24,6 +29,7 @@ return {
       keymaps = {
         send_motion = "<space>sc",
         visual_send = "<space>sc",
+        send_code_block = "<space>sb",
         send_file = "<space>sf",
         send_line = "<space>sl",
         send_mark = "<space>sm",
