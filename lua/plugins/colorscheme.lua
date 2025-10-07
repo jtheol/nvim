@@ -13,11 +13,16 @@ return {
     lazy = false,
     priority = 1000,
   },
+  {
+    "miikanissi/modus-themes.nvim",
+    lazy = false,
+    priority = 1000,
+  },
   -- Configure LazyVim to load gruvbox
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "darkthrone",
+      colorscheme = "modus_operandi",
     },
   },
 }
