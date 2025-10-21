@@ -55,6 +55,7 @@ return {
         highlight_groups = {
           -- Comment = { fg = "foam" },
           -- VertSplit = { fg = "muted", bg = "muted" },
+          CursorLine = { bg = "#2a2837" },
           NormalFloat = { bg = "none" },
         },
       })
