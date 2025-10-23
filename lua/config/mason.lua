@@ -9,7 +9,6 @@ local mason_plugins = {
   "marksman",
   "prettier",
   "python-lsp-server",
-  "pyright",
   "rubocop",
   "ruby-lsp",
   "tailwindcss-language-server",
