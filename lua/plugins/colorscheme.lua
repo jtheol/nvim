@@ -160,7 +160,6 @@ return {
   --     set_hl(0, "NeoTreeGitStaged", { fg = "#89dceb" }) -- light cyan
   --   end,
   -- },
-
   {
     "LazyVim/LazyVim",
     opts = {
