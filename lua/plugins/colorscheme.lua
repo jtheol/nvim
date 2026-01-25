@@ -1,5 +1,8 @@
 return {
   {
+    "joshdick/onedark.vim",
+  },
+  {
 
     "rebelot/kanagawa.nvim",
     config = function()
@@ -163,7 +166,7 @@ return {
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "vesper",
+      colorscheme = "onedark",
     },
   },
 }
