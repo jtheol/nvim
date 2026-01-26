@@ -1,6 +1,9 @@
 return {
   {
-    "joshdick/onedark.vim",
+    "drewtempelmeyer/palenight.vim",
+  },
+  {
+    "navarasu/onedark.nvim",
   },
   {
 
