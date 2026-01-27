@@ -12,19 +12,25 @@ return {
   {
     "navarasu/onedark.nvim",
     priority = 1000, -- make sure to load this before all the other start plugins
-    config = function()
-      require("onedark").setup({
-        style = "warm",
-      })
-      require("onedark").load()
-    end,
+    -- config = function()
+    --   require("onedark").setup({
+    --     style = "warm",
+    --   })
+    --   require("onedark").load()
+    -- end,
   },
+
   {
     "sainnhe/sonokai",
     config = function()
-      vim.g.sonokai_style = "atlantis"
+      vim.g.sonokai_style = "default"
+      vim.cmd("colorscheme sonokai")
+
+      -- Override only the Snacks picker untracked files
+      vim.api.nvim_set_hl(0, "SnacksPickerGitStatusUntracked", { fg = "#e2e2e3", bg = "NONE" })
     end,
   },
+
   {
     "sainnhe/edge",
     config = function()
@@ -196,8 +202,6 @@ return {
   -- },
   {
     "LazyVim/LazyVim",
-    opts = {
-      colorscheme = "onedark",
-    },
+    opts = {},
   },
 }
