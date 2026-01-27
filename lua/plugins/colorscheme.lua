@@ -27,7 +27,7 @@ return {
       vim.cmd("colorscheme sonokai")
 
       -- Override only the Snacks picker untracked files
-      vim.api.nvim_set_hl(0, "SnacksPickerGitStatusUntracked", { fg = "#e2e2e3", bg = "NONE" })
+      vim.api.nvim_set_hl(0, "SnacksPickerGitStatusUntracked", { fg = "#808080", bg = "NONE" })
     end,
   },
 
