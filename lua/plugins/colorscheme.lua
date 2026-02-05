@@ -1,4 +1,11 @@
 return {
+  { "bluz71/vim-moonfly-colors", name = "moonfly", lazy = false, priority = 1000 },
+
+  {
+    "webhooked/kanso.nvim",
+    lazy = false,
+    priority = 1000,
+  },
   {
     "sainnhe/gruvbox-material",
     config = function()
@@ -25,49 +32,10 @@ return {
     "sainnhe/sonokai",
     config = function()
       vim.g.sonokai_style = "atlantis"
-      vim.cmd("colorscheme sonokai")
+      -- vim.cmd("colorscheme sonokai")
 
       -- Override only the Snacks picker untracked files
       vim.api.nvim_set_hl(0, "SnacksPickerGitStatusUntracked", { fg = "#808080", bg = "NONE" })
-    end,
-  },
-
-  {
-    "sainnhe/edge",
-    config = function()
-      -- Optionally configure and load the colorscheme
-      -- directly inside the plugin declaration.
-      vim.g.edge_dim_foreground = 0
-    end,
-  },
-  {
-
-    "rebelot/kanagawa.nvim",
-    config = function()
-      require("kanagawa").setup({
-        compile = false, -- enable compiling the colorscheme
-        undercurl = true, -- enable undercurls
-        commentStyle = { italic = true },
-        functionStyle = {},
-        keywordStyle = { italic = true },
-        statementStyle = { bold = true },
-        typeStyle = {},
-        transparent = false, -- do not set background color
-        dimInactive = false, -- dim inactive window `:h hl-NormalNC`
-        terminalColors = true, -- define vim.g.terminal_color_{0,17}
-        colors = { -- add/modify theme and palette colors
-          palette = {},
-          theme = { wave = {}, lotus = {}, dragon = {}, all = {} },
-        },
-        overrides = function(colors) -- add/modify highlights
-          return {}
-        end,
-        theme = "wave", -- Load "wave" theme
-        background = { -- map the value of 'background' option to a theme
-          dark = "dragon", -- try "dragon" !
-          light = "lotus",
-        },
-      })
     end,
   },
   {
@@ -158,51 +126,53 @@ return {
     -- end,
     --
   },
-  -- {
-  --   "vague-theme/vague.nvim",
-  --   config = function()
-  --     require("vague").setup({
-  --       transparent = true,
-  --       style = {
-  --         boolean = "none",
-  --         number = "none",
-  --         float = "none",
-  --         error = "none",
-  --         comments = "none",
-  --         conditionals = "none",
-  --         functions = "none",
-  --         headings = "bold",
-  --         operators = "none",
-  --         strings = "none",
-  --         variables = "none",
-  --
-  --         -- keywords
-  --         keywords = "none",
-  --         keyword_return = "none",
-  --         keywords_loop = "none",
-  --         keywords_label = "none",
-  --         keywords_exception = "none",
-  --
-  --         -- builtin
-  --         builtin_constants = "none",
-  --         builtin_functions = "none",
-  --         builtin_types = "none",
-  --         builtin_variables = "none",
-  --       },
-  --     })
-  --     local set_hl = vim.api.nvim_set_hl
-  --     set_hl(0, "NeoTreeGitAdded", { fg = "#a6e3a1" }) -- green
-  --     set_hl(0, "NeoTreeGitModified", { fg = "#f9e2af" }) -- yellow
-  --     set_hl(0, "NeoTreeGitDeleted", { fg = "#f38ba8" }) -- red
-  --     set_hl(0, "NeoTreeGitUntracked", { fg = "#94e2d5" }) -- teal
-  --     set_hl(0, "NeoTreeGitIgnored", { fg = "#6c7086" }) -- gray
-  --     set_hl(0, "NeoTreeGitRenamed", { fg = "#fab387" }) -- orange
-  --     set_hl(0, "NeoTreeGitConflict", { fg = "#eba0ac", bold = true }) -- pink bold
-  --     set_hl(0, "NeoTreeGitStaged", { fg = "#89dceb" }) -- light cyan
-  --   end,
-  -- },
+  {
+    "vague-theme/vague.nvim",
+    config = function()
+      require("vague").setup({
+        transparent = true,
+        style = {
+          boolean = "none",
+          number = "none",
+          float = "none",
+          error = "none",
+          comments = "none",
+          conditionals = "none",
+          functions = "none",
+          headings = "bold",
+          operators = "none",
+          strings = "none",
+          variables = "none",
+
+          -- keywords
+          keywords = "none",
+          keyword_return = "none",
+          keywords_loop = "none",
+          keywords_label = "none",
+          keywords_exception = "none",
+
+          -- builtin
+          builtin_constants = "none",
+          builtin_functions = "none",
+          builtin_types = "none",
+          builtin_variables = "none",
+        },
+      })
+      local set_hl = vim.api.nvim_set_hl
+      set_hl(0, "NeoTreeGitAdded", { fg = "#a6e3a1" }) -- green
+      set_hl(0, "NeoTreeGitModified", { fg = "#f9e2af" }) -- yellow
+      set_hl(0, "NeoTreeGitDeleted", { fg = "#f38ba8" }) -- red
+      set_hl(0, "NeoTreeGitUntracked", { fg = "#94e2d5" }) -- teal
+      set_hl(0, "NeoTreeGitIgnored", { fg = "#6c7086" }) -- gray
+      set_hl(0, "NeoTreeGitRenamed", { fg = "#fab387" }) -- orange
+      set_hl(0, "NeoTreeGitConflict", { fg = "#eba0ac", bold = true }) -- pink bold
+      set_hl(0, "NeoTreeGitStaged", { fg = "#89dceb" }) -- light cyan
+    end,
+  },
   {
     "LazyVim/LazyVim",
-    opts = {},
+    opts = {
+      colorscheme = "kanso",
+    },
   },
 }
