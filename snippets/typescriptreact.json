@@ -1,0 +1,13 @@
+{
+  "React Named Export Function Component": {
+    "prefix": "rfn",
+    "body": [
+      "export function ${1:${TM_FILENAME_BASE}}() {",
+      "  return (",
+      "    <div>$0</div>",
+      "  );",
+      "}"
+    ],
+    "description": "React functional component with named export"
+  }
+}
