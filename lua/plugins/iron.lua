@@ -19,6 +19,9 @@ return {
             command = { "ipython", "--no-autoindent" },
             format = python_format,
           },
+          go = {
+            command = { "yaegi" },
+          },
         },
         -- How the repl window will be displayed
         -- See below for more information
