@@ -1,5 +1,6 @@
 return {
-  { "olivercederborg/poimandres.nvim" },
+  { "zenbones-theme/zenbones.nvim" },
+  { "projekt0n/github-nvim-theme", name = "github-theme" },
   {
     "ficcdaf/ashen.nvim",
     -- optional but recommended,
@@ -7,19 +8,22 @@ return {
     tag = "*",
     lazy = false,
     priority = 2000,
-    -- configuration is optional!
+    -- Stock dark Ashen, with only its red family changed to cmux blue.
     opts = {
-      background = "#0f1117",
+      colors = {
+        red_flame = "#5dc7f9",
+        red_glowing = "#5dc7f9",
+        red_ember = "#5dc7f9",
+        red_kindling = "#5dc7f9",
+        red_burnt_crimson = "#5dc7f9",
+        red_brick = "#5dc7f9",
+        red_deep_ember = "#5dc7f9",
+        red_ashen = "#5dc7f9",
+        red = "#5dc7f9",
+        maroon = "#5dc7f9",
+        coral = "#5dc7f9",
+      },
     },
-  },
-  {
-    "loctvl842/monokai-pro.nvim",
-    lazy = false,
-    priority = 1000,
-    -- config = function()
-    --   require("monokai-pro").setup()
-    --   vim.cmd.colorscheme("monokai-pro")
-    -- end,
   },
   -- {
   --   "folke/snacks.nvim",
@@ -90,16 +94,6 @@ return {
     "webhooked/kanso.nvim",
     lazy = false,
     priority = 1000,
-  },
-  {
-    "sainnhe/gruvbox-material",
-    config = function()
-      -- Optionally configure and load the colorscheme
-      -- directly inside the plugin declaration.
-      vim.g.gruvbox_material_enable_italic = true
-      vim.g.gruvbox_material_background = "hard"
-      -- vim.cmd.colorscheme("gruvbox-material")
-    end,
   },
   { "datsfilipe/vesper.nvim" },
   {
