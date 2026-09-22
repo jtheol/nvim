@@ -8,7 +8,6 @@ local mason_plugins = {
   "markdownlint-cli2",
   "marksman",
   "prettier",
-  "python-lsp-server",
   "rubocop",
   "ruby-lsp",
   "tailwindcss-language-server",

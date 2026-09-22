@@ -3,27 +3,10 @@ return {
   { "projekt0n/github-nvim-theme", name = "github-theme" },
   {
     "ficcdaf/ashen.nvim",
-    -- optional but recommended,
-    -- pin to the latest stable release:
     tag = "*",
     lazy = false,
     priority = 2000,
-    -- Stock dark Ashen, with only its red family changed to cmux blue.
-    opts = {
-      colors = {
-        red_flame = "#5dc7f9",
-        red_glowing = "#5dc7f9",
-        red_ember = "#5dc7f9",
-        red_kindling = "#5dc7f9",
-        red_burnt_crimson = "#5dc7f9",
-        red_brick = "#5dc7f9",
-        red_deep_ember = "#5dc7f9",
-        red_ashen = "#5dc7f9",
-        red = "#5dc7f9",
-        maroon = "#5dc7f9",
-        coral = "#5dc7f9",
-      },
-    },
+    opts = {},
   },
   -- {
   --   "folke/snacks.nvim",
@@ -99,7 +82,7 @@ return {
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "ashen",
+      colorscheme = "github_dark_default",
     },
   },
 }
